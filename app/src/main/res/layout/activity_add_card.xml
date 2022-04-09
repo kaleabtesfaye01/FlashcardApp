@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCardActivity">
+
+    <EditText
+        android:id="@+id/editQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:hint="@string/questionHint"
+        android:inputType="textMultiLine"
+        android:autofillHints="question" />
+
+    <EditText
+        android:id="@+id/editAnswer"
+        android:layout_below="@+id/editQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:hint="@string/answerHint"
+        android:inputType="textMultiLine"
+        android:autofillHints="answer" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/saveActivity"
+        android:src="@drawable/save" />
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/cancelActivity"
+        android:src="@drawable/cancel" />
+</RelativeLayout>

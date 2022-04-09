@@ -7,4 +7,9 @@
     <string name="option3">Barack Obama</string>
     <string name="showDescription">Show options when clicked.</string>
     <string name="hideDescription">Hide options when clicked.</string>
+    <string name="addActivity">Opens a new activity.</string>
+    <string name="cancelActivity">Cancel Activity</string>
+    <string name="questionHint">Enter the question here</string>
+    <string name="answerHint">Enter the answer here</string>
+    <string name="saveActivity">Save information on current activity</string>
 </resources>

@@ -98,4 +98,15 @@
         android:visibility="invisible"
         android:contentDescription="@string/hideDescription" />
 
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/addActivity" />
+
 </RelativeLayout>

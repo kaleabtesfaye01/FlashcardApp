@@ -1,10 +1,12 @@
 package com.example.flashcardapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,5 +52,22 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.option2).setVisibility(View.INVISIBLE);
             findViewById(R.id.option3).setVisibility(View.INVISIBLE);
         });
+
+        findViewById(R.id.add).setOnClickListener(view -> {
+            Intent intent = new Intent(this, AddCardActivity.class);
+            MainActivity.this.startActivityForResult(intent, 1);
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            String question = data.getExtras().getString("question");
+            String answer = data.getExtras().getString("answer");
+            ((TextView) findViewById(R.id.flashcard_question)).setText(question);
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(answer);
+        }
     }
 }
