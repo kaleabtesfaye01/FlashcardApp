@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/flashcard_question"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/question_card_background"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/question"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:elevation="5dp"/>
+
+    <TextView
+        android:id="@+id/flashcard_answer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/answer_card_background"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="@string/answer"
+        android:textColor="#351c75"
+        android:textSize="40sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/option1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/flashcard_answer"
+        android:background="#ea9999"
+        android:gravity="center"
+        android:text="@string/option1"
+        android:textColor="#351c75"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/option2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/option1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="#ea9999"
+        android:gravity="center"
+        android:text="@string/option2"
+        android:textColor="#351c75"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/option3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/option2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:background="#ea9999"
+        android:gravity="center"
+        android:text="@string/option3"
+        android:textColor="#351c75"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/show"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/show"
+        android:contentDescription="@string/showDescription" />
+
+    <ImageView
+        android:id="@+id/hide"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/hide"
+        android:visibility="invisible"
+        android:contentDescription="@string/hideDescription" />
+
+</RelativeLayout>
